@@ -12,6 +12,15 @@ console.log(person,carl)
 
 function Person(name){
     this.name = name
+    this.speak = function(){
+        console.log(`Hello my name is ${this.name}`)
+    }
 }
 var nick = new Person('nick')
-console.log(nick)
+var john = new Person('John')
+nick.speak()
+john.speak()
+john.__proto__.newattr = 'hello'
+console.log(john.__proto__)
+console.log(nick.newattr)
+console.log(Person.prototype)
