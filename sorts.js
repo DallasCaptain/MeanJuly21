@@ -26,5 +26,25 @@ function insertionsort(arr){
     return arr
 }
 
-array = [2,5,3,7,10,3,9,1]
-console.log(insertionsort(array))
+// array = [2,5,3,7,10,3,9,1]
+// console.log(insertionsort(array))
+
+
+
+//recursive problems
+//escape clause
+//iteration
+//recursion
+
+function recurse(num){
+    //escape clause
+    if(num == 0){
+        return 0
+    }
+    //iteration
+    num --
+
+    //recursion
+    x = recurse(num)
+    return x
+}
