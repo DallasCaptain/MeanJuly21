@@ -1,1 +1,4 @@
-<p>puppy-list works!</p>
+<ol>
+    <li *ngFor='let pup of puppies'><app-puppy [puppy]='pup'></app-puppy></li>
+    {{puppies | json}}
+</ol>

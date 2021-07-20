@@ -9,10 +9,12 @@ import { HttpService } from './http.service';
 export class AppComponent {
   title = 'hello angular';
   puppies :any;
+  primitive: string
 
 
   constructor(private _httpService: HttpService){
     this.puppies=[]
+    this.primitive = 'Hello Class'
     this._httpService.getPuppies().subscribe(data => {
       console.log('AC got the puppies,',data)
       this.puppies = data
@@ -20,9 +22,5 @@ export class AppComponent {
   }
 
 
-  createPuppy(){
-    this._httpService.createPuppy().subscribe(data=>{
-      console.log('returned from creating puppy',data)
-    })
-  }
+  
 }

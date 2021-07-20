@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TaskComponent } from './tasks/task/task.component';
@@ -9,7 +11,8 @@ import { PuppyComponent } from './puppy/puppy/puppy.component';
 import { PuppyListComponent } from './puppy/puppy-list/puppy-list.component';
 
 import { HttpService } from './http.service';
-import { HttpClientModule } from '@angular/common/http' //ajax requrests prebuilt
+import { HttpClientModule } from '@angular/common/http';
+import { PuppyFormComponent } from './puppy/puppy-form/puppy-form.component' //ajax requrests prebuilt
 
 
 @NgModule({
@@ -18,12 +21,14 @@ import { HttpClientModule } from '@angular/common/http' //ajax requrests prebuil
     TaskComponent,
     TaskListComponent,
     PuppyComponent,
-    PuppyListComponent
+    PuppyListComponent,
+    PuppyFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]

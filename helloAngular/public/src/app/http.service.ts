@@ -12,7 +12,7 @@ export class HttpService {
     return this._http.get('/api/puppies')
   }
   
-  createPuppy() {
-    return this._http.post('/api/puppies',{name:'JellyBean',color:'White'})
+  createPuppy(newPuppy) {
+    return this._http.post('/api/puppies',newPuppy)
   }
 }

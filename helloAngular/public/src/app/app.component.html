@@ -1,16 +1,13 @@
 <h1>Hello Angular</h1>
 <h3>Dallas Code Rocks!</h3>
-
-<app-task></app-task>
-<app-task></app-task>
-<app-task></app-task>
-
-<button (click)='createPuppy()'>GenPuppy</button>
-
-<ul>
-    <li *ngFor='let pup of puppies'>{{pup.name}} is {{pup.color}}</li>
-</ul>
+{{primitive}}
+<app-task [prim]='primitive'></app-task>
 
 
-<app-puppy *ngFor='let pup of puppies'></app-puppy>
+
+
+<app-puppy-list [puppies]='puppies'></app-puppy-list>
+
+
+<app-puppy-form></app-puppy-form>
 <router-outlet></router-outlet>
